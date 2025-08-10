@@ -2,11 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Songsang`s Blog</title>
-    <link>https://songsanggggg.github.io/post/</link>
+    <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on Songsang`s Blog</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>zh-cn</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://songsanggggg.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Aug 2025 12:45:19 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Round2</title>
+      <link>http://localhost:1313/post/round2/</link>
+      <pubDate>Sun, 10 Aug 2025 12:45:19 +0800</pubDate>
+      <guid>http://localhost:1313/post/round2/</guid>
+      <description>&lt;h1 id=&#34;unboxing&#34;&gt;Unboxing&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20250708163116174&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/home/songsanggggg/ctfNote/Web/.%5Cassets%5Cimage-20250708163116174.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​	访问地址我们看到了如下页面，结合题目描述中申先生的账号 ID 是 6，密码的 md5 是 6d8fc80ae8d10ce7d179d9bef28df666，我们就可以获得一个登录账号密码。&lt;/p&gt;
+&lt;p&gt;​	本题目中的密码通过了md5加密，我们可以通过&lt;a href=&#34;https://www.cmd5.com/default.aspx&#34;&gt;md5在线解密破解,md5解密加密&lt;/a&gt;这个网站，进行解密，解密结果为kaihe。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20250708163540224&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/home/songsanggggg/ctfNote/Web/.%5Cassets%5Cimage-20250708163540224.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​	通过分析发现，在cookie中有一个uid值为6，怀疑该网站存在平级跨权访问漏洞，修改cookie的值为1，显示结果如下。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20250708163721656&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/home/songsanggggg/ctfNote/Web/.%5Cassets%5Cimage-20250708163721656.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​	依次访问我们就可以拿到flag。&lt;/p&gt;
+&lt;p&gt;​	开盒喵qwq&lt;/p&gt;
+&lt;h1 id=&#34;图书馆&#34;&gt;图书馆&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20250708164521012&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/home/songsanggggg/ctfNote/Web/.%5Cassets%5Cimage-20250708164521012.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​	本题目中直接把账号密码传入了sql语句，因此这里有了sql注入点，我们可以构造&lt;code&gt;admin&#39; OR &#39;1&#39;=&#39;1&lt;/code&gt;，这样sql语句就成了&lt;code&gt;SELECT * FROM users WHERE username = &#39;&lt;/code&gt;admin&amp;rsquo; OR &amp;lsquo;1&amp;rsquo;=&amp;lsquo;1&amp;rsquo; AND password = &amp;lsquo;&amp;rsquo;，条件恒为1，这样就可以登录进入系统里。&lt;/p&gt;
+&lt;p&gt;​	进入系统之后就可以查看图书，其中访问图书的时候地址为&lt;code&gt;[图书馆系统 - 图书详情](http://hostname.com/book?id=1&lt;/code&gt;，怀疑id传入的点有sql注入，于是添加&amp;rsquo;截断字符串，访问地址&lt;code&gt;http://hostname.com/book?id=1&#39;&lt;/code&gt;，页面输出&lt;code&gt;查询失败，请重试: (1064, &amp;quot;You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#39;&#39;1&#39;&#39;&#39; at line 1&amp;quot;)&lt;/code&gt;，确认为sql注入点，开始注入工作。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Round1</title>
+      <link>http://localhost:1313/post/round1/</link>
+      <pubDate>Sun, 10 Aug 2025 11:49:43 +0800</pubDate>
+      <guid>http://localhost:1313/post/round1/</guid>
+      <description>&lt;h1 id=&#34;跑马场&#34;&gt;跑马场&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;?&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;php&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 真正的强者，敢于把自己的马送给别人
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;highlight_file&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;__FILE__&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;eval&lt;/span&gt;($_REQUEST[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;dc64c146a42ea65baf7b5a7d64a50972&amp;#39;&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;代码分析&#34;&gt;代码分析&lt;/h2&gt;
+&lt;h4 id=&#34;1-highlight_file__file__&#34;&gt;1. &lt;code&gt;highlight_file(__FILE__);&lt;/code&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：将当前 PHP 文件（即包含此代码的文件）的源代码以 HTML 高亮形式显示给用户。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-eval_requestdc64c146a42ea65baf7b5a7d64a50972&#34;&gt;2. &lt;code&gt;@eval($_REQUEST[&#39;dc64c146a42ea65baf7b5a7d64a50972&#39;]);&lt;/code&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;关键点拆解&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;@&lt;/code&gt;：PHP 的&lt;strong&gt;错误抑制符&lt;/strong&gt;，用于隐藏代码执行过程中的错误信息。这会让调试变得困难，但也增加了漏洞利用的隐蔽性。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eval()&lt;/code&gt;：PHP 的内置函数，用于&lt;strong&gt;执行任意 PHP 代码&lt;/strong&gt;（字符串形式）。例如：&lt;code&gt;eval(&#39;echo &amp;quot;Hello&amp;quot;;&#39;);&lt;/code&gt; 会直接输出 &lt;code&gt;Hello&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$_REQUEST&lt;/code&gt;：PHP 的&lt;strong&gt;超全局变量&lt;/strong&gt;，同时接收来自 GET、POST 或 COOKIE 的参数。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dc64c146a42ea65baf7b5a7d64a50972&lt;/code&gt;：参数名，可能是随机生成或经过哈希处理的，用于混淆，但本质上就是一个普通的参数名（如&lt;code&gt;?param=value&lt;/code&gt;中的&lt;code&gt;param&lt;/code&gt;）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;漏洞利用&#34;&gt;漏洞利用&lt;/h2&gt;
+&lt;p&gt;​	&lt;code&gt;eval(phpcode)&lt;/code&gt;通过eval()函数我们可以向其中注入执行任意php代码。通过分析上面的eval函数中传入了一个超全局变量，param名称为&lt;code&gt;dc64c146a42ea65baf7b5a7d64a50972&lt;/code&gt;，我们可以构造&lt;code&gt;https://hostname.com/?dc64c146a42ea65baf7b5a7d64a50972=system(&amp;quot;cat /flag&amp;quot;)&lt;/code&gt;来执行ls命令并看到输出结果&lt;/p&gt;
+&lt;h2 id=&#34;补充&#34;&gt;补充&lt;/h2&gt;
+&lt;h3 id=&#34;php-超级全局变量&#34;&gt;PHP 超级全局变量&lt;/h3&gt;
+&lt;p&gt;​	PHP中预定义了几个超级全局变量（superglobals） ，这意味着它们在一个脚本的全部作用域中都可用。 你不需要特别说明，就可以在函数及类中使用。&lt;/p&gt;
+&lt;p&gt;PHP 超级全局变量列表:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$GLOBALS&lt;/li&gt;
+&lt;li&gt;$_SERVER&lt;/li&gt;
+&lt;li&gt;$_REQUEST&lt;/li&gt;
+&lt;li&gt;$_POST&lt;/li&gt;
+&lt;li&gt;$_GET&lt;/li&gt;
+&lt;li&gt;$_FILES&lt;/li&gt;
+&lt;li&gt;$_ENV&lt;/li&gt;
+&lt;li&gt;$_COOKIE&lt;/li&gt;
+&lt;li&gt;$_SESSION&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;音乐会&#34;&gt;音乐会&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;img&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/get_resource.php?path=static/img/1.jpg&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;代码分析-1&#34;&gt;代码分析&lt;/h2&gt;
+&lt;p&gt;​	在这到题目中我们可以看见在页面HTML中，通过&lt;code&gt;get_resource.php&lt;/code&gt;获取到了图片内容并显示到前端中，其中传入的参数为&lt;code&gt;path&lt;/code&gt;，其值为相对路径。&lt;/p&gt;
+&lt;h2 id=&#34;漏洞利用-1&#34;&gt;漏洞利用&lt;/h2&gt;
+&lt;p&gt;​	我们可以通过访问&lt;code&gt;https://hostname.com/get_resource.php?path=flagpath&lt;/code&gt;来获取到flag内容&lt;/p&gt;
+&lt;h2 id=&#34;补充-1&#34;&gt;补充&lt;/h2&gt;
+&lt;p&gt;​	我们很难通过相对路径来确定绝对路径，所以我们通过添加../../../../../../../，一直返回到根目录，来获取flag路径。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

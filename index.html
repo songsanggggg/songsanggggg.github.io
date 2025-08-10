@@ -2,25 +2,25 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.148.2"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.148.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Songsang`s Blog</title>
 
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="https://songsanggggg.github.io/">
+<link rel="canonical" href="http://localhost:1313/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://songsanggggg.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://songsanggggg.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://songsanggggg.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://songsanggggg.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://songsanggggg.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://songsanggggg.github.io/index.xml">
-<link rel="alternate" hreflang="en" href="https://songsanggggg.github.io/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
 <noscript>
     <style>
         #theme-toggle,
@@ -57,28 +57,7 @@
         }
 
     </style>
-</noscript><meta property="og:url" content="https://songsanggggg.github.io/">
-  <meta property="og:site_name" content="Songsang`s Blog">
-  <meta property="og:title" content="Songsang`s Blog">
-  <meta property="og:locale" content="zh-cn">
-  <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Songsang`s Blog">
-<meta name="twitter:description" content="">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Songsang`s Blog",
-  "url": "https://songsanggggg.github.io/",
-  "description": "",
-  "logo": "https://songsanggggg.github.io/favicon.ico",
-  "sameAs": [
-      
-  ]
-}
-</script>
+</noscript>
 </head>
 
 <body class="list" id="top">
@@ -96,7 +75,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://songsanggggg.github.io/" accesskey="h" title="Songsang`s Blog (Alt + H)">Songsang`s Blog</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Songsang`s Blog (Alt + H)">Songsang`s Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -125,10 +104,59 @@
     </nav>
 </header>
 <main class="main"> 
+
+<article class="first-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Round2
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Unboxing ​	访问地址我们看到了如下页面，结合题目描述中申先生的账号 ID 是 6，密码的 md5 是 6d8fc80ae8d10ce7d179d9bef28df666，我们就可以获得一个登录账号密码。
+​	本题目中的密码通过了md5加密，我们可以通过md5在线解密破解,md5解密加密这个网站，进行解密，解密结果为kaihe。
+​	通过分析发现，在cookie中有一个uid值为6，怀疑该网站存在平级跨权访问漏洞，修改cookie的值为1，显示结果如下。
+​	依次访问我们就可以拿到flag。
+​	开盒喵qwq
+图书馆 ​	本题目中直接把账号密码传入了sql语句，因此这里有了sql注入点，我们可以构造admin&#39; OR &#39;1&#39;=&#39;1，这样sql语句就成了SELECT * FROM users WHERE username = &#39;admin’ OR ‘1’=‘1’ AND password = ‘’，条件恒为1，这样就可以登录进入系统里。
+​	进入系统之后就可以查看图书，其中访问图书的时候地址为[图书馆系统 - 图书详情](http://hostname.com/book?id=1，怀疑id传入的点有sql注入，于是添加’截断字符串，访问地址http://hostname.com/book?id=1&#39;，页面输出查询失败，请重试: (1064, &#34;You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#39;&#39;1&#39;&#39;&#39; at line 1&#34;)，确认为sql注入点，开始注入工作。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-08-10 12:45:19 +0800 CST'>August 10, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Round2" href="http://localhost:1313/post/round2/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Round1
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>跑马场 &lt;?php // 真正的强者，敢于把自己的马送给别人 highlight_file(__FILE__); @eval($_REQUEST[&#39;dc64c146a42ea65baf7b5a7d64a50972&#39;]); 代码分析 1. highlight_file(__FILE__); 作用：将当前 PHP 文件（即包含此代码的文件）的源代码以 HTML 高亮形式显示给用户。 2. @eval($_REQUEST[&#39;dc64c146a42ea65baf7b5a7d64a50972&#39;]); 关键点拆解： @：PHP 的错误抑制符，用于隐藏代码执行过程中的错误信息。这会让调试变得困难，但也增加了漏洞利用的隐蔽性。 eval()：PHP 的内置函数，用于执行任意 PHP 代码（字符串形式）。例如：eval(&#39;echo &#34;Hello&#34;;&#39;); 会直接输出 Hello。 $_REQUEST：PHP 的超全局变量，同时接收来自 GET、POST 或 COOKIE 的参数。 dc64c146a42ea65baf7b5a7d64a50972：参数名，可能是随机生成或经过哈希处理的，用于混淆，但本质上就是一个普通的参数名（如?param=value中的param）。 漏洞利用 ​	eval(phpcode)通过eval()函数我们可以向其中注入执行任意php代码。通过分析上面的eval函数中传入了一个超全局变量，param名称为dc64c146a42ea65baf7b5a7d64a50972，我们可以构造https://hostname.com/?dc64c146a42ea65baf7b5a7d64a50972=system(&#34;cat /flag&#34;)来执行ls命令并看到输出结果
+补充 PHP 超级全局变量 ​	PHP中预定义了几个超级全局变量（superglobals） ，这意味着它们在一个脚本的全部作用域中都可用。 你不需要特别说明，就可以在函数及类中使用。
+PHP 超级全局变量列表:
+$GLOBALS $_SERVER $_REQUEST $_POST $_GET $_FILES $_ENV $_COOKIE $_SESSION 音乐会 &lt;img src=&#34;/get_resource.php?path=static/img/1.jpg&#34;&gt; 代码分析 ​	在这到题目中我们可以看见在页面HTML中，通过get_resource.php获取到了图片内容并显示到前端中，其中传入的参数为path，其值为相对路径。
+漏洞利用 ​	我们可以通过访问https://hostname.com/get_resource.php?path=flagpath来获取到flag内容
+补充 ​	我们很难通过相对路径来确定绝对路径，所以我们通过添加../../../../../../../，一直返回到根目录，来获取flag路径。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-08-10 11:49:43 +0800 CST'>August 10, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Round1" href="http://localhost:1313/post/round1/"></a>
+</article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://songsanggggg.github.io/">Songsang`s Blog</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Songsang`s Blog</a></span> · 
 
     <span>
         Powered by
