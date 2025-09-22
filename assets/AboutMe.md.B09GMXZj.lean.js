@@ -1,0 +1,1 @@
+import{_ as e,c as r,o as t,af as l}from"./chunks/framework.DOCLS9hV.js";const p=JSON.parse('{"title":"AboutMe","description":"","frontmatter":{},"headers":[],"relativePath":"AboutMe.md","filePath":"AboutMe.md"}'),o={name:"AboutMe.md"};function i(n,a,s,h,c,d){return t(),r("div",null,[...a[0]||(a[0]=[l("",7)])])}const b=e(o,[["render",i]]);export{p as __pageData,b as default};
