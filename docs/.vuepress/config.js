@@ -6,11 +6,11 @@ import { viteBundler } from '@vuepress/bundler-vite'
 export default defineUserConfig({
   lang: 'en-US',
 
-  title: 'VuePress',
-  description: 'My first VuePress Site',
+  title: "Songsanggggg's Home",
+  description: "Songsanggggg's Blog Site",
 
   theme: defaultTheme({
-    logo: 'https://vuejs.press/images/hero.png',
+    logo: 'https://avatars.githubusercontent.com/u/95994511',
 
     navbar: [
       '/',
