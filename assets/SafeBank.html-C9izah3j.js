@@ -1,4 +1,4 @@
-import{_ as s,c as a,a as p,o as t}from"./app-CycJ9G8w.js";const e={};function o(c,n){return t(),a("div",null,[...n[0]||(n[0]=[p(`<h1 id="safe-bank" tabindex="-1"><a class="header-anchor" href="#safe-bank"><span>safe_bank</span></a></h1><p>​ 本题是在Nepctf中遇到了一道题，是接触CTF不久的一次比赛，是我第一次接触jsonpickle反序列化，其中clear的思路来自Pid,属于非预期解，但是是真不好想啊😭。</p><p>​ 题目中描述如下：</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">Python Flask作为Web框架</span>
+import{_ as s,c as a,a as p,o as t}from"./app-CkMZScaH.js";const e={};function o(c,n){return t(),a("div",null,[...n[0]||(n[0]=[p(`<h1 id="safe-bank" tabindex="-1"><a class="header-anchor" href="#safe-bank"><span>safe_bank</span></a></h1><p>​ 本题是在Nepctf中遇到了一道题，是接触CTF不久的一次比赛，是我第一次接触jsonpickle反序列化，其中clear的思路来自Pid,属于非预期解，但是是真不好想啊😭。</p><p>​ 题目中描述如下：</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">Python Flask作为Web框架</span>
 <span class="line">JSON用于数据交换</span>
 <span class="line">使用jsonpickle的高级会话管理</span>
 <span class="line">Base64编码用于Token传输</span>
