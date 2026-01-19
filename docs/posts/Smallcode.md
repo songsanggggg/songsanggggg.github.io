@@ -1,3 +1,13 @@
+---
+date: 2026-01-19
+category:
+  - CTF
+tag:
+  - CTF
+  - Web
+  - 强网拟态
+---
+
 # Smallcode
 
 ​	本题来自2025强网拟态的线上赛，其中除了预期解还有Pikaball提供的一个非预期解。
